@@ -1,0 +1,53 @@
+﻿<Window x:Class="App16.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:App16"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas>
+        <Path Data="M639.5,219.5 C674.50003,199.5 719.50006,239.5 719.50006,239.5 719.50006,239.5 719.5,79.5 639.5,79.5 559.5,79.5 560,240 560,240 560,240 604.49997,239.5 639.5,219.5 z" Fill="#FFF4F4F5" Height="161.5" Canvas.Left="560" Stretch="Fill" Stroke="Black" Canvas.Top="79.5" Width="160.5"/>
+        <Ellipse Height="40" Canvas.Left="568" Canvas.Top="195" Width="40">
+            <Ellipse.Fill>
+                <SolidColorBrush Color="Black"/>
+            </Ellipse.Fill>
+            <Ellipse.Triggers>
+                <EventTrigger RoutedEvent="Window.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames
+                                Storyboard.TargetProperty="(Canvas.Top)"
+                                Duration="0:0:10"
+                                RepeatBehavior="Forever">
+                                <SplineDoubleKeyFrame KeyTime="0%" Value="195"/>
+                                <SplineDoubleKeyFrame KeyTime="20%" Value="134"/>
+                                <SplineDoubleKeyFrame KeyTime="40%" Value="85"/>
+                                <SplineDoubleKeyFrame KeyTime="60%" Value="133"/>
+                                <SplineDoubleKeyFrame KeyTime="80%" Value="177"/>
+                                <SplineDoubleKeyFrame KeyTime="90%" Value="168"/>
+                                <SplineDoubleKeyFrame KeyTime="99%" Value="195"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames
+                                Storyboard.TargetProperty="(Canvas.Left)"
+                                Duration="0:0:10"
+                                RepeatBehavior="Forever">
+                                <SplineDoubleKeyFrame KeyTime="0%" Value="568"/>
+                                <SplineDoubleKeyFrame KeyTime="20%" Value="580"/>
+                                <SplineDoubleKeyFrame KeyTime="40%" Value="617"/>
+                                <SplineDoubleKeyFrame KeyTime="60%" Value="656"/>
+                                <SplineDoubleKeyFrame KeyTime="80%" Value="673"/>
+                                <SplineDoubleKeyFrame KeyTime="90%" Value="626"/>
+                                <SplineDoubleKeyFrame KeyTime="99%" Value="568"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Ellipse.Triggers>
+        </Ellipse>
+    </Canvas>
+</Window>
